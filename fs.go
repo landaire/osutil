@@ -33,7 +33,7 @@ func MkdirIntermediate(dir string) (err error) {
 	for _, part := range parts {
 		curdir = path.Join(curdir, part)
 
-		exist, err := exists(curdir)
+		exist, err := Exists(curdir)
 		if err != nil {
 			return err
 		}
